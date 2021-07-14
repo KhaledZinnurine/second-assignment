@@ -38,6 +38,7 @@ header{
     width: 100%;
     height: 677px;
     background-color: #2D25A0;
+    margin: 0;
 }
 .header-info{
     padding-top: 207px;
@@ -110,12 +111,13 @@ header{
     color:#6C6C6C ;
  }
 
- /* Highlights Section */
+ /* Highlights Section styles start*/
  
  .highlights{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  
     
  }
  .highlights-detail{
@@ -170,14 +172,16 @@ header{
     box-shadow: 10px 5px 5px rgb(228, 224, 224);
     border: 1px solid rgb(201, 196, 196);
     border-radius: 10px; 
+    margin: 10px;
  }
  .country,.striker,.goalkeeper ol li{
    color: rgb(45, 87, 6);
    font-size: 20px;
  }
+ /* Bonus section styles End */
 
- /* footer Section styles */
- footer{
+ /* footer Section styles start */
+ .footer-section{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -195,5 +199,81 @@ header{
      background-color: rgb(231, 226, 226);
      border-radius: 20px;
  }
+  /* footer Section styles End */
 
-
+ /* -------------------
+        Media Quaries  
+ ---------------------*/
+/* Mobile Devices */
+@media only screen and (max-width:688px) {
+    .container{
+        width: 330px;
+        justify-content: center;
+        align-items: center;
+    }
+    .players,.matches,.ranking-container{
+       
+        grid-template-columns: repeat(1,1fr);
+    }
+    .highlights,header{
+        flex-direction: column;
+    }
+    .header-info{
+        padding-top: 20px;
+    }
+    .header-banner img{
+        width: 329px;
+        height: 259.17px;
+        padding-top: 50px;
+        padding-left: 50px;
+        margin-bottom: 50px;
+    }
+    .highlights-title,.bonus-sec1-title,.bonus-sec2-title{
+        font-size: 25px;
+    }
+    .highlights-image img{
+        width: 328px;
+        height: 248px;
+    }
+    .footer-section{
+        width: 275px;
+    }
+    .footer-image img{
+        width: 250px;
+        height: 200px;
+    }
+   
+    
+}
+/* Tablet Devices */
+@media only screen and (min-width:688px) and (max-width:992px){
+    .container{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .players{
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 0px;
+    }
+    .matches,.ranking-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    header,.highlights{
+        width: 100%;
+        flex-direction: column;
+    }
+    .header-info{
+        padding-left: 30px;
+       padding-top:0 ;
+    }
+    .header-title h1{
+        margin-top: 5px;
+    }
+    .header-banner img{
+        width: 400px;
+        height: 300px;
+        padding-top: 0px;
+       padding-left: 200px;
+    }
+}
